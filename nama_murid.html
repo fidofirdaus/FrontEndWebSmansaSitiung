@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/jadwalstyle.css">
+    <script src="jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+    <title>Jadwal</title>
+    
+    <script>
+        $(document).ready(function(){
+          $("#inputan").on("keyup", function() {
+            var value = $(this).val().toLowerCase();
+            $("#bodimu #rownya").filter(function() {
+              $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+          });
+        });
+    </script>
+
+</head>
+<body>
+    <div id="modallogout" class="modal">
+        <p>Yakin Ingin Log Out?</p>
+        <a href="index.html">Yes</a>
+    </div>
+    <div class="block">
+        <li><a href="dashboard_guru.html"><img src="img/dashboard.png" alt=""></a></li>
+        <li><a href="jadwal_guru.html"><img src="img/jadwal.png" alt=""></a></li>
+        <li><a href="bahanajar_guru.html"><img src="img/ajar1.png" alt=""></a></li>
+        <li><a href="input_nilai.html"><img src="img/nilai.png" alt=""></a></li>
+        <li><a href="nama_murid.html"><img src="img/datasiswa1.png" alt=""></a></li> 
+    </div>
+    <div class="head">
+        <div class="judul">
+            <a href="#modallogout" rel="modal:open"><img src="img/logo.png" alt=""></a>
+            <p>DATA SISWA</p>
+        </div>
+    </div>
+    <label>Cari : </label>
+    <input id="inputan" type="text">
+    <table>
+        <thead>
+            <tr>
+                <th>Nomor</th>
+                <th>Nama</th>
+                <th>NISN</th>
+                <th>Jenis Kelamin</th>
+                <th>Tempat Lahir</th>
+                <th>Tanggal Lahir</th>
+            </tr>
+        </thead>
+        <tbody id="bodimu">
+            <tr id="rownya">
+                <td>1</td>
+                <td>Fido Firdaus</td>
+                <td>0013470464</td>
+                <td>Laki-Laki</td> 
+                <td>Banyuwangi</td>
+                <td>17 Oktober 2001</td>
+            </tr>
+            <tr id="rownya">
+                <td>2</td>
+                <td>Mad Ipsum</td>
+                <td>0013472131</td>
+                <td>Laki-Laki</td> 
+                <td>Jambi</td>
+                <td>02 Desember 1999</td>
+            </tr>
+            <tr id="rownya">
+                <td>3</td>
+                <td>Rizal Faqrul</td>
+                <td>0013387912</td>
+                <td>Laki-Laki</td> 
+                <td>Blitar</td>
+                <td>17 Agustus 2000</td>
+            </tr>
+            <tr id="rownya">
+                <td>4</td>
+                <td>Luthfiandi Sayyid</td>
+                <td>0025478645</td>
+                <td>Laki-Laki</td> 
+                <td>Kediri</td>
+                <td>10 Januari 1999</td>
+            </tr>
+            <tr id="rownya">
+                <td>5</td>
+                <td>Safitri Ningtyas</td>
+                <td>0012459872</td>
+                <td>Perempuan</td> 
+                <td>Banyuwangi</td>
+                <td>13 Januari 2000</td>  
+            </tr>
+        </tbody>
+    </table>
+        <div class="button">
+            <a href="bahanajar_guru.html" class="next">NEXT</a>
+            <a href="dashboard_guru.html" class="back">BACK</a>
+        </div>
+    
+</body>
+</html>

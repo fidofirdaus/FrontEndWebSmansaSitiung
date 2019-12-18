@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Selamat Datang di Smansasit E-Learning</title>
+  <link rel="stylesheet" type="text/css" href="css/index_style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $(".margintop").click(function(){
+    $("header nav").toggle();
+    $(".login").toggle();
+  });
+});
+</script>
+</head>
+<body>
+    
+  <div class="nav">
+    <header>
+      <img class="logo" src="img/Group 3.png">
+      <nav>
+        <ul class="nav_links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="profil.html">Profil</a></li>
+          <li><a href="login.html">E-Learning</a></li>
+        </ul>
+      </nav>
+    <a class="login" href="login.html"><button>Login</button></a>
+    </header>
+    <div class="margintop">
+    <div class="burger"></div>
+    <div class="burger"></div>
+    <div class="burger"></div>
+    </div>
+  </div>
+
+  <div class="content">
+    <div id="slider">
+      <div id="box">
+        <figure>
+          <img src="img/1.jpg" width=20% height=600px>
+          <img src="img/2.jpg" width=20% height=600px>
+          <img src="img/3.jpg" width=20% height=600px>
+          <img src="img/4.jpg" width=20% height=600px>
+          <img src="img/5.jpg" width=20% height=600px>
+        </figure>
+      </div>
+    </div>
+    <div class="article">
+      <div class="main-article">
+        <h1 class="recent-post-title">Berita Terkini</h1>
+        <div class="post">
+          <img src="img/art1.jpg" alt="" class="post-image">
+          <div class="post-preview">
+            <h2><a href="#">Ini Judul Artikel</a></h2>
+            <p class="preview-text">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit veniam debitis adipisci consectetur doloribus quaerat saepe, maiores, earum rem ex nobis. Est quos, magni provident saepe ex commodi nulla perferendis.
+            </p>
+            <a href="article.html" id="btn">Selengkapnya</a>
+          </div>
+        </div>
+        <div class="post">
+          <img src="img/art2.jpg" alt="" class="post-image">
+          <div class="post-preview">
+            <h2><a href="#">Juara LKTI 2019</a></h2>
+            <p class="preview-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis provident vero praesentium?Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe iusto incidunt placeat quo necessitatibus.
+            </p>
+            <a href="#" id="btn">Selengkapnya</a>
+          </div>
+        </div>
+        <div class="post">
+          <img src="img/art3.jpg" alt="" class="post-image">
+          <div class="post-preview">
+            <h2><a href="#">Lorem ipsum dolor, sit amet consectetur adipisicing.</a></h2>
+            <p class="preview-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi fugiat, dicta repudiandae aliquid distinctio odit voluptatibus doloribus sapiente dolores repellat sunt porro numquam velit.
+            </p>
+            <a href="#" id="btn">Selengkapnya</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+      <p>© 2018 Copyright SMAN 1 SITIUNG | Web Development</p>
+  </div>
+</body>
+</html>

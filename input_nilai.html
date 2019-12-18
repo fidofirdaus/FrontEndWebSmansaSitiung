@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Smansasit E-Learning | Input Nilai</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" type="text/css" href="css/style_input.css">
+        <script src="jquery.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+    </head>
+    <body>
+        <div id="modallogout" class="modal">
+            <p>Yakin Ingin Log Out?</p>
+            <a href="index.html">Yes</a>
+        </div>
+
+        <div class="container">
+            <div class="block">
+                <li><a href="dashboard_guru.html"><img src="img/dashboard.png" alt=""></a></li>
+                <li><a href="jadwal_guru.html"><img src="img/jadwal.png" alt=""></a></li>
+                <li><a href="bahanajar_guru.html"><img src="img/ajar1.png" alt=""></a></li>
+                <li><a href="input_nilai.html"><img src="img/nilai1.png" alt=""></a></li>
+                <li><a href="nama_murid.html"><img src="img/datasiswa.png" alt=""></a></li>
+            </div>
+    
+        <div class="head">
+            <div class="judul">
+                <a href="#modallogout" rel="modal:open"><img src="img/logo.png" alt=""></a>
+                <p>NILAI SISWA</p>
+            </div>
+        </div>
+            <div class="tab_2">
+                Nama :<input type="text" name="nama" id="nama" autocomplete="off">
+                Nilai Biologi :<input type="number" name="biologi" id="biologi">
+                Nilai Matematika :<input type="number" name="matematika" id="matematika">
+                Nilai Sejarah :<input type="number" name="sejarah" id="sejarah">
+                Nilai Fisika :<input type="number" name="fisika" id="fisika">
+                Nilai Kimia :<input type="number" name="kimia" id="kimia">
+                Nilai Penjas :<input type="number" name="penjas" id="penjas">
+                Nilai Bahasa Indonesia :<input type="number" name="indonesia" id="indonesia">
+                Nilai Bahasa Inggris :<input type="number" name="inggris" id="inggris">
+                Nilai Kesenian :<input type="number" name="kesenian" id="kesenian">
+                Nilai Pendidikan Agama :<input type="number" name="agama" id="agama">
+                <button onclick="addHtmlTableRow();">Tambah</button>
+                <button onclick="editHtmlTbleSelectedRow();">Edit</button>
+                <button onclick="removeSelectedRow();">Hapus</button>
+            </div>
+                <table id="table" class="tab">
+                    <tr>
+                        <th>Nama</th>
+                        <th>Biologi</th>
+                        <th>Matematika</th>
+                        <th>Sejarah</th>
+                        <th>Fisika</th>
+                        <th>Kimia</th>
+                        <th>Penjas</th>
+                        <th>Bahasa Indonesia</th>
+                        <th>Bahasa Inggris</th>
+                        <th>Kesenian</th>
+                        <th>Pendidikan Agama</th>
+                    </tr>
+                    <tr>
+                        <td>Fido Firdaus</td>
+                        <td>87</td>
+                        <td>95</td>
+                        <td>87</td>
+                        <td>95</td>
+                        <td>87</td>
+                        <td>95</td>
+                        <td>87</td>
+                        <td>95</td>
+                        <td>87</td>
+                        <td>95</td>
+                    </tr>
+                        <tr>
+                            <td>Mad Ipsum</td>
+                            <td>87</td>
+                            <td>90</td>
+                            <td>89</td>
+                            <td>91</td>
+                            <td>82</td>
+                            <td>95</td>
+                            <td>87</td>
+                            <td>95</td>
+                            <td>80</td>
+                            <td>97</td>
+                        </tr>
+                        <tr>
+                            <td>Rizal Faqrul</td>
+                            <td>87</td>
+                            <td>90</td>
+                            <td>87</td>
+                            <td>92</td>
+                            <td>80</td>
+                            <td>90</td>
+                            <td>80</td>
+                            <td>95</td>
+                            <td>87</td>
+                            <td>95</td>
+                        </tr>
+                        <tr>
+                            <td>Adi Tak Tung</td>
+                            <td>80</td>
+                            <td>90</td>
+                            <td>80</td>
+                            <td>93</td>
+                            <td>88</td>
+                            <td>99</td>
+                            <td>87</td>
+                            <td>94</td>
+                            <td>82</td>
+                            <td>91</td>
+                        </tr>
+                </table>
+            <div class="button">
+                    <a href="bahanajar_guru.html" class="back">BACK</a>
+            </div>
+        </div>
+        
+        <script>
+            
+            var rIndex,
+                table = document.getElementById("table");
+            
+            // check the empty input
+            function checkEmptyInput()
+            {
+                var isEmpty = false,
+                    nama = document.getElementById("nama").value,
+                    biologi = document.getElementById("biologi").value,
+                    matematika = document.getElementById("matematika").value,
+                    sejarah = document.getElementById("sejarah").value,
+                    fisika = document.getElementById("fisika").value,
+                    kimia = document.getElementById("kimia").value;
+                    penjas = document.getElementById("penjas").value,
+                    indonesia = document.getElementById("indonesia").value,
+                    inggris = document.getElementById("inggris").value,
+                    kesenian = document.getElementById("kesenian").value,
+                    agama = document.getElementById("agama").value;
+                    
+                if(nama === ""){
+                    alert("Harap Isi Nama Siswa");
+                    isEmpty = true;
+                }
+                else if(biologi === ""){
+                    alert("Nilai Biologi Tidak Boleh Kosong");
+                    isEmpty = true;
+                }
+                else if(matematika === ""){
+                    alert("Nilai Matematika Tidak Boleh Kosong");
+                    isEmpty = true;
+                }
+                else if(sejarah === ""){
+                    alert("Nilai Sejarah Tidak Boleh Kosong");
+                    isEmpty = true;
+                }
+                else if(fisika === ""){
+                    alert("Nilai Fisika Tidak Boleh Kosong");
+                    isEmpty = true;
+                }
+                else if(kimia === ""){
+                    alert("Nilai Kimia Tidak Boleh Kosong");
+                    isEmpty = true;
+                }
+                else if(penjas === ""){
+                    alert("Nilai Penjas Tidak Boleh Kosong");
+                    isEmpty = true;
+                }
+                else if(indonesia === ""){
+                    alert("Nilai Bahasa Indonesia Tidak Boleh Kosong");
+                    isEmpty = true;
+                }
+                else if(inggris === ""){
+                    alert("Nilai Bahasa Inggris Tidak Boleh Kosong");
+                    isEmpty = true;
+                }
+                else if(kesenian === ""){
+                    alert("Nilai Kesenian Tidak Boleh Kosong");
+                    isEmpty = true;
+                }
+                else if(agama === ""){
+                    alert("Nilai Pendidikan Agama Tidak Boleh Kosong");
+                    isEmpty = true;
+                }
+                return isEmpty;
+            }
+            
+            // add Row
+            function addHtmlTableRow()
+            {
+                // get the table by id
+                // create a new row and cells
+                // get value from input text
+                // set the values into row cell's
+                if(!checkEmptyInput()){
+                var newRow = table.insertRow(table.length),
+                    cell1 = newRow.insertCell(0),
+                    cell2 = newRow.insertCell(1),
+                    cell3 = newRow.insertCell(2),
+                    cell4 = newRow.insertCell(3),
+                    cell5 = newRow.insertCell(4),
+                    cell6 = newRow.insertCell(5),
+                    cell7 = newRow.insertCell(6),
+                    cell8 = newRow.insertCell(7),
+                    cell9 = newRow.insertCell(8),
+                    cell10 = newRow.insertCell(9),
+                    cell11 = newRow.insertCell(10),
+                    nama = document.getElementById("nama").value,
+                    biologi = document.getElementById("biologi").value,
+                    matematika = document.getElementById("matematika").value,
+                    sejarah = document.getElementById("sejarah").value,
+                    fisika = document.getElementById("fisika").value,
+                    kimia = document.getElementById("kimia").value,
+                    penjas = document.getElementById("penjas").value,
+                    indonesia = document.getElementById("indonesia").value,
+                    inggris = document.getElementById("inggris").value,
+                    kesenian = document.getElementById("kesenian").value,
+                    agama = document.getElementById("agama").value;
+            
+                cell1.innerHTML = nama;
+                cell2.innerHTML = biologi;
+                cell3.innerHTML = matematika;
+                cell4.innerHTML = sejarah;
+                cell5.innerHTML = fisika;
+                cell6.innerHTML = kimia;
+                cell7.innerHTML = penjas;
+                cell8.innerHTML = indonesia;
+                cell9.innerHTML = inggris;
+                cell10.innerHTML = kesenian;
+                cell11.innerHTML = agama;
+                // call the function to set the event to the new row
+                selectedRowToInput();
+                }
+            }
+            
+            // display selected row data into input text
+            function selectedRowToInput()
+            {
+                
+                for(var i = 1; i < table.rows.length; i++)
+                {
+                    table.rows[i].onclick = function()
+                    {
+                      // get the seected row index
+                      rIndex = this.rowIndex;
+                      document.getElementById("nama").value = this.cells[0].innerHTML;
+                      document.getElementById("biologi").value = this.cells[1].innerHTML;
+                      document.getElementById("matematika").value = this.cells[2].innerHTML;
+                      document.getElementById("sejarah").value = this.cells[3].innerHTML;
+                      document.getElementById("fisika").value = this.cells[4].innerHTML;
+                      document.getElementById("kimia").value = this.cells[5].innerHTML;
+                      document.getElementById("penjas").value = this.cells[6].innerHTML;
+                      document.getElementById("indonesia").value = this.cells[7].innerHTML;
+                      document.getElementById("inggris").value = this.cells[8].innerHTML;
+                      document.getElementById("kesenian").value = this.cells[9].innerHTML;
+                      document.getElementById("agama").value = this.cells[10].innerHTML;
+                    };
+                }
+            }
+            selectedRowToInput();
+            
+            function editHtmlTbleSelectedRow()
+            {
+                var nama = document.getElementById("nama").value,
+                    biologi = document.getElementById("biologi").value,
+                    matematika = document.getElementById("matematika").value,
+                    sejarah = document.getElementById("sejarah").value,
+                    fisika = document.getElementById("fisika").value,
+                    kimia = document.getElementById("kimia").value,
+                    penjas = document.getElementById("penjas").value,
+                    indonesia = document.getElementById("indonesia").value,
+                    inggris = document.getElementById("inggris").value,
+                    kesenian = document.getElementById("kesenian").value,
+                    agama = document.getElementById("agama").value;
+               if(!checkEmptyInput()){
+                table.rows[rIndex].cells[0].innerHTML = nama;
+                table.rows[rIndex].cells[1].innerHTML = biologi;
+                table.rows[rIndex].cells[2].innerHTML = matematika;
+                table.rows[rIndex].cells[3].innerHTML = sejarah;
+                table.rows[rIndex].cells[4].innerHTML = fisika;
+                table.rows[rIndex].cells[5].innerHTML = kimia;
+                table.rows[rIndex].cells[6].innerHTML = penjas;
+                table.rows[rIndex].cells[7].innerHTML = indonesia;
+                table.rows[rIndex].cells[8].innerHTML = inggris;
+                table.rows[rIndex].cells[9].innerHTML = kesenian;
+                table.rows[rIndex].cells[10].innerHTML = agama;
+              }
+            }
+            
+            function removeSelectedRow()
+            {
+                table.deleteRow(rIndex);
+                // clear input text
+                document.getElementById("nama").value = "";
+                document.getElementById("biologi").value = "";
+                document.getElementById("matematika").value = "";
+                document.getElementById("sejarah").value = "";
+                document.getElementById("fisika").value = "";
+                document.getElementById("kimia").value = "";
+                document.getElementById("penjas").value = "";
+                document.getElementById("indonesia").value = "";
+                document.getElementById("inggris").value = "";
+                document.getElementById("kesenian").value = "";
+                document.getElementById("agama").value = "";
+            }
+        </script>    
+    </body>
+</html>
