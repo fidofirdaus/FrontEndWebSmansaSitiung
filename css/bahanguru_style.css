@@ -1,0 +1,127 @@
+body{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    
+}
+.block{
+    list-style: none;
+    float: left;
+    margin-top: 0%;
+    position: relative;
+    background-color:#0291DB;    
+    height:750px;
+    width: 10%;
+}
+
+.head{
+    margin-left: 124px;
+    height:60pt ;
+    border:#BEE17E 1pt solid;
+    background-color: #BEE17E;
+}
+.judul img{
+    padding: 5px 5px 5px 20px;
+    width: 175pt;
+    height: 50pt;
+}
+.judul p {
+    margin-top:-45pt;
+    margin-left:230pt;
+    font-size: 25pt;
+    color: #fff;
+    height: 40pt;
+    font-family: Century Gothic;
+    font-style: bold;
+}
+.judul h3{
+    padding: 15pt 0 20pt 60pt;
+    font-size: 23pt;    
+    font-family: Stone Sans ITC TT;
+    text-decoration: underline;
+}
+.judul .isi{
+    padding: 10pt 0 20pt 90pt;
+    font-family: Century Gothic;
+    font-size:  50 px;
+    color: #0291DB;
+    text-decoration: none;
+}
+.judul h4{
+    padding: 0 0 0 60pt;
+    font-family: Century Gothic;
+}
+.block a img{
+    width: 100%;
+    margin-top: 0%;   
+}
+.block a img:hover{
+    color: rgb(255, 255, 255);
+    background-color: white;
+    font-weight: bold;
+    box-shadow: 0 0 5px rgb(255, 255, 255);
+}
+.block img:hover a{
+    color: rgb(255, 255, 255);
+    background-color: white;
+    font-weight: bold;
+    box-shadow: 0 0 5px rgb(255, 255, 255);
+}
+#custom-button{
+    padding: 10px;
+    margin-left: 120px;
+    color: #fff;
+    background-color: #0291DB;
+    border: 1px solid #000;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#custom-button:hover{
+    background-color: #59B6E6;
+}
+#custom-text{
+    margin-left: 10px;
+    font-family: sans-serif;
+    color: #aaa;
+}
+
+.button a{
+    display: inline;
+    font-size: 8pt;
+    text-decoration: none;
+    float: right;
+    color: white;
+    font-family: Stone Sans Sem ITC TT;
+    margin-top: 400pt;
+}
+.button a.back{
+    border: 5pt solid #59B6E6;
+    background-color: #59B6E6;
+    border-radius: 10pt;
+    padding: 1pt 7pt ;
+    margin-right: 50pt;
+}
+
+.button a.next{
+    border: 5pt solid #BEE17E;
+    background-color: #BEE17E;
+    border-radius: 10pt;
+    padding: 1pt 7pt ;
+    margin-right: 50pt;
+}
+
+.button a.back:hover{
+    background-color: #fff;
+    border: 5pt solid #fff;
+    color: #59B6E6;
+    box-shadow: 1pt 1pt 0 #59B6E6;
+    font-weight: bold;
+}
+
+.button a.next:hover{
+    background-color: #fff;
+    border: 5pt solid #fff;
+    color: #BEE17E;
+    box-shadow: 1pt 1pt 1pt #BEE17E;
+    font-weight: bold;
+}

@@ -1,0 +1,154 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.block{
+    list-style: none;
+    float: left;
+    margin-top: 0%;
+    position: relative;
+    background-color:#0291DB;    
+    height:1275pt;
+    width: 10%;
+}
+
+.head{
+    margin-left: 124px;
+    height:60pt ;
+    border:#BEE17E 1pt solid;
+    background-color: #BEE17E;
+}
+.judul img{
+    padding: 5px 5px 5px 20px;
+    width: 175pt;
+    height: 50pt;
+}
+.judul p {
+    margin-top:-45pt;
+    margin-left:230pt;
+    font-size: 25pt;
+    color: #fff;
+    height: 40pt;
+    font-family: Century Gothic;
+    font-style: bold;
+}
+.block a img{
+    width: 100%;
+    margin-top: 0%;
+        
+}
+.block a img:hover{
+    color: rgb(255, 255, 255);
+    background-color: white;
+    font-weight: bold;
+    box-shadow: 0 0 5px rgb(255, 255, 255);
+}
+.block img:hover a{
+    color: rgb(255, 255, 255);
+    background-color: white;
+    font-weight: bold;
+    box-shadow: 0 0 5px rgb(255, 255, 255);
+}
+.container{
+    overflow: hidden;
+    width: 100%;
+    margin: 0;    
+}
+.tab {
+    border-collapse: collapse;
+    margin: 30px auto auto auto;
+    font-size: 0.9em;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.tab tr th {
+    background-color: #BEE17E;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+
+.tab th,
+.tab td{
+    padding: 12px 15px;
+}
+.tab td{
+    text-align: center;
+}
+.tab tbody tr {
+    background-color: #ffffff;
+    border-bottom: 1px solid #dddddd;
+}
+tr {
+    transition:all .25s ease-in-out;
+}
+tr:hover{
+    font-weight: bold;
+    cursor: pointer
+}
+.tab_2{
+    width: 300pt;
+    margin: 50pt auto 0 auto;
+}
+input[type="text"],
+input[type="number"]{
+    background: rgba(255,255,255,0.1);
+    border: none;
+    font-size: 16px;
+    height: auto;
+    margin: 0;
+    outline: 0;
+    padding: 15px;
+    width: 303pt;
+    background-color: #e8eeef;
+    color: #8a97a0;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+    margin-bottom: 30px;
+    border-radius: 5px;
+}
+button{
+    padding: 15px;
+    color: #fff;
+    background-color: #BEE17E;
+    font-size: 18px;
+    text-align: center;
+    font-style: normal;
+    border-radius: 5px;
+    width: 325pt;
+    border: 1px solid #3ac162;
+    border-width: 1px 1px 3px;
+    box-shadow: 0 -1px 0 rgba(255,255,255,0.1);
+    margin-bottom: 10px; 
+}
+button:hover{
+    font-weight: bold;
+    background-color: white;
+    color: #4bc970;
+}
+.button a{
+    display: inline;
+    font-size: 8pt;
+    text-decoration: none;
+    float: right;
+    color: white;
+    font-family: Stone Sans Sem ITC TT;
+    margin-top: 15pt;
+}
+.button a.back{
+    border: 5pt solid #59B6E6;
+    background-color: #59B6E6;
+    border-radius: 10pt;
+    padding: 1pt 7pt ;
+    margin-right: 30pt;
+}
+
+.button a.back:hover{
+    background-color: #fff;
+    border: 5pt solid #fff;
+    color: #59B6E6;
+    box-shadow: 1pt 1pt 0 #59B6E6;
+    font-weight: bold;
+}

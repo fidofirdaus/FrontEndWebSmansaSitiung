@@ -1,0 +1,138 @@
+
+body{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    
+}
+.block{
+    list-style: none;
+    float: left;
+    margin-top: 0%;
+    position: relative;
+    background-color:#0291DB;    
+    height:750px;
+    width: 10%;
+}
+
+.head{
+    margin-left: 124px;
+    height:60pt ;
+    border:#BEE17E 1pt solid;
+    background-color: #BEE17E;
+}
+.judul img{
+    padding: 5px 5px 5px 20px;
+    width: 175pt;
+    height: 50pt;
+}
+.judul p {
+    margin-top:-45pt;
+    margin-left:230pt;
+    font-size: 25pt;
+    color: #fff;
+    height: 40pt;
+    font-family: Century Gothic;
+    font-style: bold;
+}
+.selamat{
+    color: #59B6E6;
+    margin-left: 150pt;
+    margin-top: 30pt;  
+    font-family: Century Gothic;
+}
+.selamat h4{
+    font-size: 12px;
+}
+.kalender{
+    margin-left:750pt; 
+    /* border: 3pt solid rgb(0, 0, 0); */
+    width: 230px;
+    height: 300px;
+    background:rgb(231, 231, 231);
+    box-sizing: border-box;
+    font-family:Century Gothic; 
+    border-radius: 20px; 
+}
+.kalender .image{
+    padding:1px 0 0 10px;
+}
+.kalender .image h4{
+    margin-top: -10pt;
+    font-size: 12px;
+}
+.kalender .date{
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25px,1fr));
+    margin-top: -20pt;
+}
+.kalender .date div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25px;
+    color: #0291DB;
+}
+.kalender .date div .day{
+    font-weight: 700;
+}
+.kalender .date div.day:first-child,
+.kalender .date div.number:nth-child(7n + 1)
+{
+    color: red;
+    font-weight: 700;
+}
+.kalender .date div.number.active,
+.kalender .date div.number:hover
+{
+    background: rgb(0, 219, 248);
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.kalender .date div.number.active1{
+    background: rgb(119, 185, 194);
+    color:white;
+    font-weight: 700;
+    cursor: pointer;
+}    
+.kalender .iven{
+    padding: 0 0 0 20pt; 
+    font-size: 10px;
+}
+.block a img{
+    width: 100%;
+    margin-top: 0%;
+        
+}
+.block a img:hover{
+    color: rgb(255, 255, 255);
+    background-color: white;
+    font-weight: bold;
+    box-shadow: 0 0 5px rgb(255, 255, 255);
+}
+.block img:hover a{
+    color: rgb(255, 255, 255);
+    background-color: white;
+    font-weight: bold;
+    box-shadow: 0 0 5px rgb(255, 255, 255);
+}
+
+.button a{
+    display: inline;
+    font-size: 8pt;
+    text-decoration: none;
+    float: right;
+    color: white;
+    font-family: Stone Sans Sem ITC TT;
+    margin-top: 70pt;
+}
+.button a.next{
+    border: 5pt solid #BEE17E;
+    background-color: #BEE17E;
+    border-radius: 10pt;
+    padding: 1pt 7pt ;
+    margin-right: 50pt;
+}
